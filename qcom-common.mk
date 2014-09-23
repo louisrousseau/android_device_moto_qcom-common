@@ -177,13 +177,6 @@ PRODUCT_PACKAGES += \
     resize2fs \
     setup_fs
 
-#wifi
-PRODUCT_PACKAGES += \
-    hostapd.accept \
-    hostapd.deny \
-    hostapd_default.conf \
-    libnetcmdiface
-
 # Symlinks
 PRODUCT_PACKAGES += \
     libxml2 \

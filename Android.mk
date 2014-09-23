@@ -24,38 +24,6 @@ ifneq ($(filter msm8960 msm8226,$(TARGET_BOARD_PLATFORM)),)
 
 LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := hostapd.accept
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := config/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/hostapd
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := hostapd.deny
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := config/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/hostapd
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := hostapd_default.conf
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := config/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/hostapd
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := p2p_supplicant_overlay.conf
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := config/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/wifi
-include $(BUILD_PREBUILT)
-
 include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
