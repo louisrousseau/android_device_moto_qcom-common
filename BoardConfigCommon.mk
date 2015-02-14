@@ -36,6 +36,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Wifi related defines
 BOARD_HAS_QCOM_WLAN := true
@@ -106,8 +107,8 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 #camera abi compatiblily
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
 
-# Power
-TARGET_USES_CM_POWERHAL := true
+# Use CM PowerHAL by default if not definied elsewhere
+TARGET_POWERHAL_VARIANT ?= cm
 
 # Number of supplementary service groups allowed by init
 TARGET_NR_SVC_SUPP_GIDS := 28
