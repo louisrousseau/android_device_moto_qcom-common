@@ -31,7 +31,8 @@ LOCAL_CFLAGS += \
      -D_ANDROID_
 
 LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils
+    $(TARGET_OUT_HEADERS)/gps.utils \
+    device/moto/qcom-common/include
 
 LOCAL_COPY_HEADERS_TO:= libloc_eng/
 LOCAL_COPY_HEADERS:= \
@@ -86,7 +87,8 @@ LOCAL_CFLAGS += \
 
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
-    $(LOCAL_PATH)/../ulp/inc
+    $(LOCAL_PATH)/../ulp/inc \
+    device/moto/qcom-common/include
 
 LOCAL_PRELINK_MODULE := false
 
@@ -118,7 +120,8 @@ LOCAL_CFLAGS += \
 ## Includes
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
-    $(LOCAL_PATH)/../ulp/inc
+    $(LOCAL_PATH)/../ulp/inc \
+    device/moto/qcom-common/include
 
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
